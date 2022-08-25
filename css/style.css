@@ -1,0 +1,25 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    max-width: 1000px;
+    background-color: rgb(248, 243, 235);
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.5;
+}
+
+.title {
+    color: rgb(55, 55, 180);
+    background-color: rgb(254, 252, 250);
+    text-align: center;
+    padding: 16px 30px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px -1px #CBD5DB;
+}

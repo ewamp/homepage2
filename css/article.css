@@ -1,0 +1,66 @@
+.article__header {
+    color: rgb(175, 25, 25);
+    background-color: rgb(246, 233, 219);
+    padding: 10px 30px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    box-shadow: 0px 0px 8px -1px #CBD5DB;
+}
+
+.article__container {
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 20px;
+    padding: 15px 30px;
+    background-color: rgb(254, 252, 250);
+    box-shadow: 0px 0px 8px -1px #CBD5DB;
+    max-width: 1000px;
+}
+
+.article__link {
+    color: rgb(175, 25, 25);
+    text-decoration: none;
+}
+
+.article__link:visited {
+    color: rgb(20, 20, 227);
+}
+
+.article__link:hover {
+    color: crimson;
+    border-bottom: 1px solid;
+    outline: none;
+}
+
+.article__link:active {
+    color: rgb(107, 31, 31);
+}
+
+.article__table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.article__tableHeader {
+    color: white;
+    background-color: rgb(85, 85, 180);
+    font-weight: 400;
+}
+
+.article__tableContainer {
+    overflow-x: auto;
+}
+
+.article__tableRow:nth-child(even) {
+    background-color: rgb(246, 233, 219);
+}
+
+.article__tableRow:hover {
+    background-color: rgb(182, 178, 178);
+}
+
+.article__tableCell {
+    border: 1px solid #ccc;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
