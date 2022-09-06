@@ -1,29 +1,33 @@
-console.log("Witam! Ten kod jest już w repozytorium Git.");
-
-let section__button = document.querySelector(".section__button");
-let section__trailPicture = document.querySelector(".section__trailPicture");
-let changeSpanText = document.querySelector(".js-changeSpanText");
-
-section__button.addEventListener("click", () => {
-    section__trailPicture.classList.toggle("section__trailPicture--bigSize");
-
-    if (section__trailPicture.classList.contains("section__trailPicture--bigSize")) {
-        changeSpanText.innerText = "Zmniejsz";
-    } else {
-        changeSpanText.innerText = "Powiększ";
+{
+    const welcome = () => {
+        console.log("Witam! Ten kod jest już w repozytorium Git.")
     }
-});
 
-let section__button2 = document.querySelector(".section__button2");
-let section__trailPicture2 = document.querySelector(".section__trailPicture2");
-let changeSpanText2 = document.querySelector(".js-changeSpanText2");
+    const togglePictureSize = () => {
+        const section__trailPicture = document.querySelector(".section__trailPicture");
+        const changeSpanText = document.querySelector(".js-changeSpanText");
 
-section__button2.addEventListener("click", () => {
-    section__trailPicture2.classList.toggle("section__trailPicture--bigSize");
+        section__trailPicture.classList.toggle("section__trailPicture--bigSize");
+        changeSpanText.innerText = section__trailPicture.classList.contains("section__trailPicture--bigSize") ? "Zmniejsz" : "Powiększ";
+    };
 
-    if (section__trailPicture2.classList.contains("section__trailPicture--bigSize")) {
-        changeSpanText2.innerText = "Zmniejsz";
-    } else {
-        changeSpanText2.innerText = "Powiększ";
-    }
-});
+    const togglePictureSize2 = () => {
+        const section__trailPicture2 = document.querySelector(".section__trailPicture2");
+        const changeSpanText2 = document.querySelector(".js-changeSpanText2");
+
+        section__trailPicture2.classList.toggle("section__trailPicture--bigSize");
+        changeSpanText2.innerText = section__trailPicture2.classList.contains("section__trailPicture--bigSize") ? "Zmniejsz" : "Powiększ";
+    };
+
+    const init = () => {
+        const section__button = document.querySelector(".section__button");
+        section__button.addEventListener("click", togglePictureSize);
+
+        const section__button2 = document.querySelector(".section__button2");
+        section__button2.addEventListener("click", togglePictureSize2);
+
+        welcome();
+    };
+
+    init();
+}
