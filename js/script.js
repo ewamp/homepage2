@@ -4,7 +4,7 @@
     }
 
     const togglePictureSize = () => {
-        const section__trailPicture = document.querySelector(".section__trailPicture");
+        const section__trailPicture = document.querySelector(".js-section__trailPicture");
         const changeSpanText = document.querySelector(".js-changeSpanText");
 
         section__trailPicture.classList.toggle("section__trailPicture--bigSize");
@@ -12,7 +12,7 @@
     };
 
     const togglePictureSize2 = () => {
-        const section__trailPicture2 = document.querySelector(".section__trailPicture2");
+        const section__trailPicture2 = document.querySelector(".js-section__trailPicture2");
         const changeSpanText2 = document.querySelector(".js-changeSpanText2");
 
         section__trailPicture2.classList.toggle("section__trailPicture--bigSize");
@@ -20,10 +20,10 @@
     };
 
     const init = () => {
-        const section__button = document.querySelector(".section__button");
+        const section__button = document.querySelector(".js-section__button");
         section__button.addEventListener("click", togglePictureSize);
 
-        const section__button2 = document.querySelector(".section__button2");
+        const section__button2 = document.querySelector(".js-section__button2");
         section__button2.addEventListener("click", togglePictureSize2);
 
         welcome();
