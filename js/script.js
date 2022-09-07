@@ -3,28 +3,32 @@
         console.log("Witam! Ten kod jest już w repozytorium Git.")
     }
 
-    const togglePictureSize = () => {
-        const section__trailPicture = document.querySelector(".js-section__trailPicture");
-        const spanText = document.querySelector(".js-spanText");
+    const togglePictureSize = (picture, text) => {
+        picture.classList.toggle("section__trailPicture--bigSize");
+        text.innerText = picture.classList.contains("section__trailPicture--bigSize") ? "Zmniejsz" : "Powiększ";
 
-        section__trailPicture.classList.toggle("section__trailPicture--bigSize");
-        spanText.innerText = section__trailPicture.classList.contains("section__trailPicture--bigSize") ? "Zmniejsz" : "Powiększ";
-    };
-
-    const togglePictureSize2 = () => {
-        const section__trailPicture2 = document.querySelector(".js-section__trailPicture2");
-        const spanText2 = document.querySelector(".js-spanText2");
-
-        section__trailPicture2.classList.toggle("section__trailPicture--bigSize");
-        spanText2.innerText = section__trailPicture2.classList.contains("section__trailPicture--bigSize") ? "Zmniejsz" : "Powiększ";
     };
 
     const init = () => {
-        const section__button = document.querySelector(".js-section__button");
-        section__button.addEventListener("click", togglePictureSize);
+        const button = document.querySelector(".js-button");
+        const trailPicture = document.querySelector(".js-trailPicture");
+        const spanText = document.querySelector(".js-spanText");
 
-        const section__button2 = document.querySelector(".js-section__button2");
-        section__button2.addEventListener("click", togglePictureSize2);
+        const button2 = document.querySelector(".js-button2");
+        const trailPicture2 = document.querySelector(".js-trailPicture2");
+        const spanText2 = document.querySelector(".js-spanText2");
+
+
+
+        button.addEventListener("click", () => {
+            togglePictureSize(trailPicture, spanText);
+        });
+
+
+        button2.addEventListener("click", () => {
+            togglePictureSize(trailPicture2, spanText2);
+        });
+
 
         welcome();
     };
